@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebDriver;
 import com.example.pages.LoginPage;
 import com.example.utils.DriverFactory;
+import com.example.config.Config;
 
 public class LoginSteps {
     private WebDriver driver;
@@ -18,7 +19,7 @@ public class LoginSteps {
 
     @Given("User navigates to login page")
     public void user_navigates_to_login_page() {
-        driver.navigate().to("https://example.com/login");
+        driver.navigate().to(Config.getLoginPageUrl());
     }
 
     @When("User enters valid credentials")

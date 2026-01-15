@@ -2,3 +2,4 @@ com\example\steps\LoginSteps.class
 com\example\utils\DriverFactory.class
 com\example\base\TestBase.class
 com\example\pages\LoginPage.class
+com\example\config\Config.class
