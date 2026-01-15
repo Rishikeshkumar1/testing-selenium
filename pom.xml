@@ -18,25 +18,14 @@
 	</properties>
 
 	<dependencies>
-		<!-- Cucumber JVM for JUnit Platform -->
-		<dependency>
-			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-junit-platform-engine</artifactId>
-			<version>${cucumber.version}</version>
-		</dependency>
+		
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
 			<version>${cucumber.version}</version>
 		</dependency>
 
-		<!-- JUnit 5 -->
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter</artifactId>
-			<version>${junit.jupiter.version}</version>
-		</dependency>
-
+		
 		<!-- Selenium (optional, included for web UI tests) -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -58,7 +47,7 @@
 		</dependency>
 
 		<!-- TestNG -->
-
+		
 
 	</dependencies>
 
@@ -78,12 +67,10 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.1.2</version>
 				<configuration>
-					<includes>
-						<include>**/*Test*.java</include>
-						<include>**/*Steps.java</include>
-					</includes>
-					<useModulePath>false</useModulePath>
-				</configuration>
+                <suiteXmlFiles>
+                    <suiteXmlFile>testng.xml</suiteXmlFile>
+                </suiteXmlFiles>
+            </configuration>
 			</plugin>
 		</plugins>
 	</build>
